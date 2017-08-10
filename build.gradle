@@ -1,0 +1,10 @@
+
+project.version = "0.0.1";
+
+task(build, type: Zip) {
+	from file('src');
+	exclude("**/*.xcf");
+	baseName(project.name);
+	version(project.version);
+	destinationDir file('bin');
+}
